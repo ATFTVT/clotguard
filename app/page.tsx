@@ -4,8 +4,29 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Clock, Heart, Shield } from "lucide-react"
 import { AnimatedSection } from "@/components/animated-section"
+import { TestimonialCarousel } from "@/components/testimonial-carousel"
 
 export default function Home() {
+  const testimonials = [
+    {
+      quote:
+        "It's great to hear you're working on such an impactful healthcare product. I think it's a very novel idea!",
+      author: "Grace Fu",
+      title: "Pharmaceutical research at U of T's Leslie Dan Faculty",
+    },
+    {
+      quote: "I think your idea is fascinating and certainly would be very useful to the medical field.",
+      author: "Issac Tang",
+      title: "Medical Researcher w/UCalgary",
+    },
+    {
+      quote:
+        "The device in question is truly revolutionary. For people who are more likely to suffer serious injuries or clotting issues, a patch that can detect bleeding and distribute freeze-dried platelets exactly where they are needed could save lives. It's like having a personal, smart medic on your skin, ready to go in the event of an emergency. The potential of this technology to revolutionize emergency treatment and improve general safety truly fascinates me.",
+      author: "Mehak Nijjar",
+      title: "Board Member – Airdrie Affairs & Legal Insurance Liaison",
+    },
+  ]
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with Background Image */}
@@ -97,6 +118,22 @@ export default function Home() {
             <p className="text-lg text-gray-600 max-w-[600px] mx-auto">
               Our cutting-edge patch detects injuries and autonomously stops bleeding in seconds.
             </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Expert Testimonials Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <div className="container px-4 md:px-6">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">What Experts Say</h2>
+            <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
+              Healthcare professionals recognize the revolutionary potential of ClotGuard
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={200}>
+            <TestimonialCarousel testimonials={testimonials} />
           </AnimatedSection>
         </div>
       </section>
@@ -193,31 +230,6 @@ export default function Home() {
                 </div>
               </AnimatedSection>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-        <div className="container px-4 md:px-6">
-          <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-clotguard-red">
-              What Experts Say
-            </h2>
-          </AnimatedSection>
-          <AnimatedSection animation="zoom-in" delay={200} className="mx-auto max-w-[800px]">
-            <Card className="border-none shadow-lg">
-              <CardContent className="p-6 md:p-10">
-                <blockquote className="text-lg md:text-xl text-gray-700 italic">
-                  "ClotGuard could redefine trauma care for military and civilians alike."
-                </blockquote>
-                <div className="mt-4 flex items-center">
-                  <div className="ml-4">
-                    <p className="text-base font-medium">Emergency Medicine Expert</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </AnimatedSection>
         </div>
       </section>

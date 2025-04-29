@@ -68,6 +68,7 @@ export default function Navbar() {
               "text-sm font-medium transition-colors",
               atTop ? "text-white hover:text-white/80" : "text-gray-700 hover:text-clotguard-red",
             )}
+            scroll={true}
           >
             Home
           </Link>
@@ -77,6 +78,7 @@ export default function Navbar() {
               "text-sm font-medium transition-colors",
               atTop ? "text-white hover:text-white/80" : "text-gray-700 hover:text-clotguard-red",
             )}
+            scroll={true}
           >
             Our Solution
           </Link>
@@ -86,6 +88,7 @@ export default function Navbar() {
               "text-sm font-medium transition-colors",
               atTop ? "text-white hover:text-white/80" : "text-gray-700 hover:text-clotguard-red",
             )}
+            scroll={true}
           >
             About Us
           </Link>
@@ -95,6 +98,7 @@ export default function Navbar() {
               "text-sm font-medium transition-colors",
               atTop ? "text-white hover:text-white/80" : "text-gray-700 hover:text-clotguard-red",
             )}
+            scroll={true}
           >
             Prototype
           </Link>
@@ -104,6 +108,7 @@ export default function Navbar() {
               "text-sm font-medium transition-colors",
               atTop ? "text-white hover:text-white/80" : "text-gray-700 hover:text-clotguard-red",
             )}
+            scroll={true}
           >
             Contact Us
           </Link>
@@ -125,6 +130,7 @@ export default function Navbar() {
               href="/"
               className="text-sm font-medium transition-colors text-gray-700 hover:text-clotguard-red"
               onClick={toggleMenu}
+              scroll={true}
             >
               Home
             </Link>
@@ -132,6 +138,7 @@ export default function Navbar() {
               href="/solution"
               className="text-sm font-medium transition-colors text-gray-700 hover:text-clotguard-red"
               onClick={toggleMenu}
+              scroll={true}
             >
               Our Solution
             </Link>
@@ -139,6 +146,7 @@ export default function Navbar() {
               href="/about"
               className="text-sm font-medium transition-colors text-gray-700 hover:text-clotguard-red"
               onClick={toggleMenu}
+              scroll={true}
             >
               About Us
             </Link>
@@ -146,6 +154,7 @@ export default function Navbar() {
               href="/prototype"
               className="text-sm font-medium transition-colors text-gray-700 hover:text-clotguard-red"
               onClick={toggleMenu}
+              scroll={true}
             >
               Prototype
             </Link>
@@ -153,6 +162,7 @@ export default function Navbar() {
               href="/contact"
               className="text-sm font-medium transition-colors text-gray-700 hover:text-clotguard-red"
               onClick={toggleMenu}
+              scroll={true}
             >
               Contact Us
             </Link>
