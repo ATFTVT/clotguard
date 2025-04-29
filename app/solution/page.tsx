@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Clock, Heart, Shield } from "lucide-react"
+import { ArrowRight, Clock, Check, Activity, Zap, BarChart } from "lucide-react"
 import { AnimatedSection } from "@/components/animated-section"
 
 export default function Solution() {
@@ -33,23 +33,20 @@ export default function Solution() {
                   Every second counts in trauma. Delayed care means lives lost.
                 </p>
                 <p className="text-gray-600">
-                  In trauma situations, uncontrolled bleeding can lead to death within minutes. The gap between injury
-                  and treatment is where most preventable deaths occur.
+                  Hemorrhage, or uncontrolled bleeding, is a major cause of preventable deaths, especially when the body
+                  is affected by traumatic injuries. It's estimated that hemorrhage accounts for 1.5 million global
+                  deaths every year, while excessive blood loss in injuries accounts for roughly 2 million deaths each
+                  year, for civilian-related accidents.
                 </p>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-clotguard-red">•</span>
-                    <span>Over 60,000 Americans die annually from traumatic bleeding</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-clotguard-red">•</span>
-                    <span>The majority of trauma deaths occur within the first hour</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-clotguard-red">•</span>
-                    <span>Current solutions require trained personnel and precious time</span>
-                  </li>
-                </ul>
+                <p className="text-gray-600">
+                  On the battlefield, roughly 81.5% of fatalities were due to hemorrhage, and all fatalities occurred
+                  before the casualties reached a medical facility. Around 80% of 'Died of Wounds' on the battlefield
+                  (DOW) deaths were caused by hemorrhages from major trauma.
+                </p>
+                <p className="text-gray-600">
+                  Current methods to treat hemorrhages, both in civilian accidents and on the battlefield, are not
+                  suitable for traumatic injuries of that scale.
+                </p>
               </div>
             </AnimatedSection>
             <AnimatedSection animation="slide-left" delay={200}>
@@ -72,64 +69,14 @@ export default function Solution() {
         </div>
       </section>
 
-      {/* Rest of the page content remains unchanged */}
-      {/* Current Methods Section */}
+      {/* Our Solution Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
         <div className="container px-4 md:px-6">
-          <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red text-center mb-12">
-              Current Methods
-            </h2>
-          </AnimatedSection>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <AnimatedSection animation="fade-up" delay={0}>
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">Tourniquets</h3>
-                  <p className="text-gray-600">
-                    Effective for limb injuries but requires training and can cause tissue damage if left on too long.
-                  </p>
-                  <p className="text-sm text-gray-500 italic">
-                    Limitation: Only works on limbs, requires proper application
-                  </p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-up" delay={200}>
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">Hemostatic Gauze</h3>
-                  <p className="text-gray-600">
-                    Requires direct pressure and packing into wounds, which takes time and training.
-                  </p>
-                  <p className="text-sm text-gray-500 italic">
-                    Limitation: Requires manual application and continuous pressure
-                  </p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-up" delay={400}>
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">Pressure Bandages</h3>
-                  <p className="text-gray-600">
-                    Simple but less effective for severe bleeding and requires constant pressure.
-                  </p>
-                  <p className="text-sm text-gray-500 italic">Limitation: Limited effectiveness for severe trauma</p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Innovation Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-        <div className="container px-4 md:px-6">
           <AnimatedSection animation="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">Our Innovation</h2>
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">Our Solution</h2>
             <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
-              ClotGuard uses smart sensing, rapid response, and autonomous clotting to revolutionize trauma care.
+              ClotGuard proposes a unique anti-blood loss system that transports platelets to the site of bleeding to
+              create blood clots and prevent excess bleeding, saving crucial time for paramedics to treat the injury.
             </p>
           </AnimatedSection>
 
@@ -147,80 +94,246 @@ export default function Solution() {
             </AnimatedSection>
             <AnimatedSection animation="slide-left" className="space-y-4 order-1 lg:order-2">
               <h3 className="text-2xl font-bold text-gray-800">How ClotGuard Works</h3>
-              <ol className="space-y-4">
-                <li className="flex">
-                  <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-clotguard-100 text-clotguard-red font-bold mr-3">
-                    1
-                  </span>
-                  <div>
-                    <p className="font-medium">Detection</p>
-                    <p className="text-gray-600">Smart sensors identify bleeding and assess severity</p>
-                  </div>
-                </li>
-                <li className="flex">
-                  <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-clotguard-100 text-clotguard-red font-bold mr-3">
-                    2
-                  </span>
-                  <div>
-                    <p className="font-medium">Activation</p>
-                    <p className="text-gray-600">Patch autonomously activates clotting mechanism</p>
-                  </div>
-                </li>
-                <li className="flex">
-                  <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-clotguard-100 text-clotguard-red font-bold mr-3">
-                    3
-                  </span>
-                  <div>
-                    <p className="font-medium">Targeted Delivery</p>
-                    <p className="text-gray-600">Clotting agents are delivered precisely where needed</p>
-                  </div>
-                </li>
-                <li className="flex">
-                  <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-clotguard-100 text-clotguard-red font-bold mr-3">
-                    4
-                  </span>
-                  <div>
-                    <p className="font-medium">Stabilization</p>
-                    <p className="text-gray-600">Bleeding is controlled within seconds</p>
-                  </div>
-                </li>
-              </ol>
+              <p className="text-gray-600">
+                All the technology used is stored in a patch, similar to that of a diabetes patch. The patch includes a
+                storage cartridge where freeze-dried platelets attached to nanobots are stored, is equipped with sensors
+                that detect different bleeding biomarkers such as thrombin and oxygen levels, and has already secured
+                tubes for immediate platelet delivery.
+              </p>
+              <p className="text-gray-600">
+                When bleeding is detected, the patch provides the dosage of nanobots and platelets into the body through
+                the already attached tubes, which will travel to the bleeding site and create blood clotting to prevent
+                further excessive blood loss.
+              </p>
+              <p className="text-gray-600">
+                ClotGuard patches can be specifically applied before military personnel go onto the battlefield, for
+                immediate reaction to detected bleeding when traumatic injury occurs. The freeze-dried platelets can be
+                stored at varying temperatures until needed and can last for up to three years before needing a
+                replacement.
+              </p>
+              <p className="text-gray-600">
+                ClotGuard patches can also be 5x-10x cheaper than the constant supply of gauze for a year because of
+                their reusable and long-lasting methods, as well as technology.
+              </p>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
 
-          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
-            <AnimatedSection animation="fade-up" delay={0}>
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <Clock className="h-12 w-12 text-clotguard-red" />
-                  <h3 className="text-xl font-bold">Real-Time Detection</h3>
+      {/* Technology Process Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <div className="container px-4 md:px-6">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">Our Process</h2>
+            <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
+              Using freeze-dried platelets, delivered by nanobots, to prevent traumatic hemorrhage
+            </p>
+          </AnimatedSection>
+
+          <div className="space-y-16">
+            {/* Step 1 */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <AnimatedSection animation="fade-up">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-clotguard-100 text-clotguard-red font-bold">
+                      1
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800">Creating Platelets for ClotGuard Patch</h3>
+                  </div>
                   <p className="text-gray-600">
-                    Advanced sensors detect bleeding instantly and assess severity to trigger appropriate response.
+                    Freeze-dried platelets are sourced from blood donors or lab-grown using stem cell tech. Platelets
+                    are preserved using cryoprotectants, then lyophilized (freeze-dried) for long-term storage inside
+                    the patch. These platelets are stored in sterile, single-use microchambers within the patch.
                   </p>
+                  <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                    <h4 className="font-bold text-clotguard-red mb-2">What are Platelets?</h4>
+                    <p className="text-sm text-gray-600">
+                      Tiny blood cells in blood that form clots and stop or prevent bleeding. Platelets can be easily
+                      freeze-dried for long-term storage until use. Once the freeze-dried platelets are released into
+                      the bloodstream, they will reactivate and become active for effective use at the damaged area.
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-up" delay={200}>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                  <Image
+                    src="/placeholder.svg?height=300&width=500"
+                    alt="Freeze-dried platelets illustration"
+                    width={500}
+                    height={300}
+                    className="rounded-lg object-cover mb-4"
+                  />
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Step 2 */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <AnimatedSection animation="fade-up" delay={200} className="order-2 lg:order-1">
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                  <Image
+                    src="/placeholder.svg?height=300&width=500"
+                    alt="Nanobots illustration"
+                    width={500}
+                    height={300}
+                    className="rounded-lg object-cover mb-4"
+                  />
+                </div>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-up" className="order-1 lg:order-2">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-clotguard-100 text-clotguard-red font-bold">
+                      2
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800">Creating Nanobots for ClotGuard Patch</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    Nanobots are made using biocompatible materials (like silica, gold, or smart polymers). Each nanobot
+                    is programmed to: Detect vascular damage, migrate toward the injury site, and activate as well as
+                    assist with clot formation. They carry clotting agents such as thrombin, which will assist the
+                    hemostasis process.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Step 3 */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <AnimatedSection animation="fade-up">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-clotguard-100 text-clotguard-red font-bold">
+                      3
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800">ClotGuard Patch Activation</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    The patch contains biosensors that detect: blood leakage, blood pressure drop, and tissue pH change.
+                    Upon detection, it: Rehydrates the freeze-dried platelets, deploys nanobots through the patch's
+                    microneedles, and sends a signal to alert the user's emergency contact.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-up" delay={200}>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                  <Image
+                    src="/placeholder.svg?height=300&width=500"
+                    alt="Patch activation illustration"
+                    width={500}
+                    height={300}
+                    className="rounded-lg object-cover mb-4"
+                  />
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Step 4 */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <AnimatedSection animation="fade-up" delay={200} className="order-2 lg:order-1">
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                  <Image
+                    src="/placeholder.svg?height=300&width=500"
+                    alt="Blood loss prevention illustration"
+                    width={500}
+                    height={300}
+                    className="rounded-lg object-cover mb-4"
+                  />
+                </div>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-up" className="order-1 lg:order-2">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-clotguard-100 text-clotguard-red font-bold">
+                      4
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800">Preventing Blood Loss Method</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    Nanobots and platelets start to work hard together: Platelets initiate the clotting cascade, and
+                    nanobots amplify clotting signals and seal microtears. Microneedles will provide the localized
+                    delivery to external wounds. For internal hemorrhage, bots circulate and target the source of
+                    bleeding.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Step 5 */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <AnimatedSection animation="fade-up">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-clotguard-100 text-clotguard-red font-bold">
+                      5
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800">Deactivation of Nanobots After Blood Clotting</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    After clotting is achieved, nanobots detect clotting factor levels and pressure normalization. They
+                    also become biodegradable, breaking down into harmless byproducts.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-up" delay={200}>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                  <Image
+                    src="/placeholder.svg?height=300&width=500"
+                    alt="Nanobot deactivation illustration"
+                    width={500}
+                    height={300}
+                    className="rounded-lg object-cover mb-4"
+                  />
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <div className="container px-4 md:px-6">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">Impact</h2>
+            <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
+              ClotGuard is revolutionizing trauma care with measurable results
+            </p>
+          </AnimatedSection>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <AnimatedSection animation="fade-up" delay={0}>
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                  <div className="h-16 w-16 rounded-full bg-clotguard-50 flex items-center justify-center">
+                    <BarChart className="h-8 w-8 text-clotguard-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold">5-10x</h3>
+                  <p className="text-gray-600">More effective than current treatments</p>
                 </CardContent>
               </Card>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <Heart className="h-12 w-12 text-clotguard-red" />
-                  <h3 className="text-xl font-bold">Automated Clotting</h3>
-                  <p className="text-gray-600">
-                    Proprietary technology delivers clotting agents directly to the wound site without manual
-                    intervention.
-                  </p>
+                  <div className="h-16 w-16 rounded-full bg-clotguard-50 flex items-center justify-center">
+                    <Activity className="h-8 w-8 text-clotguard-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold">30-60%</h3>
+                  <p className="text-gray-600">Slower bleeding</p>
                 </CardContent>
               </Card>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <Shield className="h-12 w-12 text-clotguard-red" />
-                  <h3 className="text-xl font-bold">Portable & User-Friendly</h3>
-                  <p className="text-gray-600">
-                    Simple application requires minimal training, making it accessible for military, first responders,
-                    and civilians.
-                  </p>
+                  <div className="h-16 w-16 rounded-full bg-clotguard-50 flex items-center justify-center">
+                    <Clock className="h-8 w-8 text-clotguard-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold">10-30 min</h3>
+                  <p className="text-gray-600">Extended survival time</p>
                 </CardContent>
               </Card>
             </AnimatedSection>
@@ -228,58 +341,48 @@ export default function Solution() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+      {/* Advantages Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6">
           <AnimatedSection animation="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">How It Works</h2>
-            <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
-              The ClotGuard microneedle patch uses advanced technology to rapidly control bleeding
-            </p>
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red mb-4">Advantages</h2>
+            <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">Why ClotGuard is the future of trauma care</p>
           </AnimatedSection>
 
-          <div className="grid gap-8 md:grid-cols-3 items-center">
-            <AnimatedSection animation="fade-up" delay={0} className="text-center">
-              <div className="rounded-full bg-clotguard-50 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-clotguard-red font-bold text-xl">1</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Rapid Blood Loss</h3>
-              <p className="text-gray-600">
-                When bleeding occurs, every second counts. Traditional methods require manual intervention.
-              </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <AnimatedSection animation="fade-up" delay={0}>
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                  <Check className="h-12 w-12 text-clotguard-red" />
+                  <h3 className="text-xl font-bold">Preventable Deaths</h3>
+                  <p className="text-gray-600">
+                    Traumatic hemorrhage deaths can be prevented with our rapid response technology
+                  </p>
+                </CardContent>
+              </Card>
             </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={200} className="text-center">
-              <div className="rounded-full bg-clotguard-50 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-clotguard-red font-bold text-xl">2</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Release of Platelets</h3>
-              <p className="text-gray-600">
-                ClotGuard's microneedles release freeze-dried platelets directly to the wound site.
-              </p>
+            <AnimatedSection animation="fade-up" delay={200}>
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                  <Clock className="h-12 w-12 text-clotguard-red" />
+                  <h3 className="text-xl font-bold">Extended Survival</h3>
+                  <p className="text-gray-600">
+                    Extending the survival period from initial injury occurrence gives medical professionals more time
+                    to save lives
+                  </p>
+                </CardContent>
+              </Card>
             </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={400} className="text-center">
-              <div className="rounded-full bg-clotguard-50 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-clotguard-red font-bold text-xl">3</span>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Blood Clotting</h3>
-              <p className="text-gray-600">
-                The platelets immediately begin forming clots, stopping blood loss within seconds.
-              </p>
-            </AnimatedSection>
-          </div>
-
-          <div className="mt-16 max-w-3xl mx-auto">
-            <AnimatedSection animation="fade-up" delay={600}>
-              <div className="relative rounded-lg overflow-hidden shadow-xl">
-                <Image
-                  src="/images/patch-diagram.png"
-                  alt="ClotGuard mechanism diagram"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                />
-              </div>
+            <AnimatedSection animation="fade-up" delay={400}>
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                  <Zap className="h-12 w-12 text-clotguard-red" />
+                  <h3 className="text-xl font-bold">Rapid Response</h3>
+                  <p className="text-gray-600">
+                    Automatic detection and immediate deployment of clotting agents when seconds count
+                  </p>
+                </CardContent>
+              </Card>
             </AnimatedSection>
           </div>
         </div>

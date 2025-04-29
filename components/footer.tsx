@@ -10,7 +10,7 @@ export default function Footer() {
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative h-10 w-10 bg-white rounded-full p-1">
               <Image
-                src="/images/clotguard-logo.png"
+                src="/images/clotguard-logo-red.png"
                 alt="ClotGuard Logo"
                 width={40}
                 height={40}

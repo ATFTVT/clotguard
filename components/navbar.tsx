@@ -45,7 +45,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-3">
           <div className="relative h-10 w-10">
             <Image
-              src="/images/clotguard-logo.png"
+              src={scrolled ? "/images/clotguard-logo-red.png" : "/images/logo-white.png"}
               alt="ClotGuard Logo"
               width={40}
               height={40}
