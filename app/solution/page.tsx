@@ -158,13 +158,19 @@ export default function Solution() {
               </AnimatedSection>
               <AnimatedSection animation="fade-up" delay={200}>
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Freeze-dried platelets illustration"
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover mb-4"
-                  />
+                  <div className="relative">
+                    <Image
+                      src="/images/platelets-microscope.png"
+                      alt="Microscope view of platelets (purple dots) and red blood cells"
+                      width={500}
+                      height={500}
+                      className="rounded-lg object-contain w-full mb-4"
+                    />
+                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded text-xs text-gray-700 max-w-[250px]">
+                      Microscope view: Purple dots are platelets, circular structures are red blood cells (dyed for
+                      visibility)
+                    </div>
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
