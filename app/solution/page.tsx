@@ -9,13 +9,13 @@ export default function Solution() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-clotguard-50 to-white">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-clotguard-600 to-white">
         <div className="container px-4 md:px-6 text-center">
           <AnimatedSection animation="fade-up">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-clotguard-red mb-6">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white mb-6">
               The ClotGuard Advantage
             </h1>
-            <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl mb-8">
+            <p className="mx-auto max-w-[700px] text-white md:text-xl mb-8">
               A revolutionary approach to trauma care that saves precious seconds when they matter most.
             </p>
           </AnimatedSection>
@@ -72,6 +72,7 @@ export default function Solution() {
         </div>
       </section>
 
+      {/* Rest of the page content remains unchanged */}
       {/* Current Methods Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
         <div className="container px-4 md:px-6">

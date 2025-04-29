@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { AnimatedSection } from "@/components/animated-section"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -45,14 +46,16 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-red-50 to-white">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-clotguard-600 to-white">
         <div className="container px-4 md:px-6 text-center">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-red-600 mb-6">
-            Contact Us
-          </h1>
-          <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
-            Have questions or want to learn more about ClotGuard? We'd love to hear from you.
-          </p>
+          <AnimatedSection animation="fade-up">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white mb-6">
+              Contact Us
+            </h1>
+            <p className="mx-auto max-w-[700px] text-white md:text-xl">
+              Have questions or want to learn more about ClotGuard? We'd love to hear from you.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 

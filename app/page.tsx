@@ -12,7 +12,7 @@ export default function Home() {
       <section className="relative w-full py-12 md:py-24 lg:py-32">
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-clotguard-red/10 via-clotguard-50/50 to-white z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-clotguard-600 via-clotguard-100/50 to-white z-0"></div>
           <Image
             src="/images/patch-on-arm.png"
             alt="Medical patch on arm"
@@ -27,16 +27,16 @@ export default function Home() {
             <AnimatedSection animation="fade-up">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-clotguard-red">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     Saving Lives, One Second at a Time.
                   </h1>
-                  <p className="max-w-[600px] text-gray-700 md:text-xl">
+                  <p className="max-w-[600px] text-white md:text-xl">
                     ClotGuard is the future of autonomous bleeding control.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/solution">
-                    <Button className="bg-clotguard-red hover:bg-clotguard-dark">
+                    <Button className="bg-white text-clotguard-red hover:bg-gray-100">
                       Learn More About Our Innovation
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

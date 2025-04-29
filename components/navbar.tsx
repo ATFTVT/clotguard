@@ -44,7 +44,13 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
           <div className="relative h-10 w-10">
-            <Image src="/images/logo-red.png" alt="ClotGuard Logo" width={40} height={40} className="object-contain" />
+            <Image
+              src="/images/clotguard-logo.png"
+              alt="ClotGuard Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
           </div>
           <span
             className={cn(
