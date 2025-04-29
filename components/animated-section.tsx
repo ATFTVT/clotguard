@@ -18,7 +18,7 @@ interface AnimatedSectionProps {
 
 export function AnimatedSection({
   children,
-  className,
+  className = "",
   animation = "fade-up",
   delay = 0,
   threshold,
@@ -28,7 +28,7 @@ export function AnimatedSection({
 
   const getAnimationClasses = () => {
     const baseClasses = "transition-all duration-1000"
-    const delayClass = delay ? `delay-${delay * 100}` : ""
+    const delayClass = delay ? `delay-${delay}` : ""
 
     if (!isVisible) {
       switch (animation) {
@@ -50,11 +50,15 @@ export function AnimatedSection({
     return "opacity-100 translate-y-0 translate-x-0 scale-100"
   }
 
+  // Safe concatenation of classes
+  const animationClasses = getAnimationClasses()
+  const baseClasses = "transition-all duration-1000"
+  const delayClass = delay ? `delay-${delay}` : ""
+  const combinedClasses = cn(animationClasses, baseClasses, className, delayClass)
+
   return (
-    <div ref={ref} className={cn(getAnimationClasses(), baseClasses, className, `delay-${delay * 100}`)}>
+    <div ref={ref} className={combinedClasses}>
       {children}
     </div>
   )
 }
-
-const baseClasses = "transition-all duration-1000"
