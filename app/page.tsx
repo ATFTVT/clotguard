@@ -29,8 +29,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Background Image */}
-      <section className="relative w-full py-12 md:py-24 lg:py-32">
+      {/* Hero Section with Full Screen Background Image */}
+      <section className="relative w-full h-screen flex items-center">
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-clotguard-600 via-clotguard-100/50 to-white z-0"></div>

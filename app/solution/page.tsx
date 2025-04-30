@@ -9,8 +9,13 @@ export default function Solution() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-clotguard-600 to-white">
-        <div className="container px-4 md:px-6 text-center">
+      <section className="relative w-full h-[70vh] flex items-center">
+        {/* Background with Gradient */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-clotguard-600 to-white z-0"></div>
+        </div>
+
+        <div className="container px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection animation="fade-up">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white mb-6">
               The ClotGuard Advantage

@@ -1,27 +1,26 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
 
 export default function About() {
   const teamMembers = [
     {
       name: "Arissai Filleul",
-      role: "Team Member",
-      bio: "Key contributor to the ClotGuard project with expertise in medical technology development.",
+      role: "Neuroscience Specialist",
+      bio: "Arissai Filleul, a 16-year-old neuroscience enthusiast, is enrolled in The Knowledge Society's (TKS) Innovate program for the 2024–2025 academic year. Her research interests are in the fields of connectomics, brain science, and cognitive diversity, especially ADHD. In order to map and comprehend these connections in real time, Arissai is delving into complex subjects like functional MRI (fMRI) analysis. She is particularly interested in how the brain's neural wiring affects behavior, memory, and perception. Her goal is audacious: to identify the neural pathways underlying cognition and attention and to help make discoveries that could revolutionize our knowledge of and approach to treating neurodivergent disorders.",
       image: "/images/arissai-filleul.jpeg",
     },
     {
       name: "Sophia Dhami",
-      role: "Team Member",
-      bio: "Brings expertise in healthcare innovation and medical device development to the ClotGuard team.",
+      role: "Regenerative Medicine Expert",
+      bio: "Sophia Dhami has a strong interest in regenerative medicine and biotechnology. She has worked on a number of innovative projects, such as creating a pill that uses cutting-edge drug delivery systems to dissolve kidney stones caused by uric acid. Sophia's love of biotechnology is evident in her studies of CAR-T therapy, where she investigates how tailored approaches could transform cancer treatment. The difficulties of improving T-cell customization and expanding the patient base for whom CAR-T treatments are available are of special interest to her. Sophia is also engaged in a Super CAR-T therapy project. She is dedicated to creating novel solutions that push the limits of medical science because she has a strong interest in biotechnology and how it can revolutionize healthcare.",
       image: "/images/sophia-dhami.jpeg",
     },
     {
       name: "Isavella Tsoulias",
-      role: "Team Member",
-      bio: "Specializes in biomedical engineering with a focus on emergency medical solutions.",
+      role: "Biotechnology Innovator",
+      bio: "A rising star in the biotechnology field, Isavella Tsoulias is particularly interested in phage therapy and the development of antimicrobial therapies. She is a member of The Knowledge Society (TKS) and an exceptional Grade 9 student who is working at the cutting edge of synthetic biology, creating bacteriophages to combat drug-resistant, deadly infections that pose a threat to world health. Isavella is not merely studying the science; she is reimagining what is possible thanks to her profound understanding of molecular biology, which is far beyond her years. Her efforts are intended to push the limits of contemporary medicine, prevent medical collapse in dire situations, and create the foundation for scalable, life-saving solutions.",
       image: "/images/isavella-tsoulias.jpeg",
     },
   ]
@@ -29,8 +28,13 @@ export default function About() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-clotguard-600 to-white">
-        <div className="container px-4 md:px-6 text-center">
+      <section className="relative w-full h-[70vh] flex items-center">
+        {/* Background with Gradient */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-clotguard-600 to-white z-0"></div>
+        </div>
+
+        <div className="container px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection animation="fade-up">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white mb-6">
               Meet the Minds Behind ClotGuard
@@ -42,8 +46,28 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Team Introduction Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <div className="container px-4 md:px-6">
+          <AnimatedSection animation="fade-up" className="mx-auto max-w-[900px] text-center space-y-6">
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red">Our Team</h2>
+            <p className="text-lg text-gray-700">
+              We are a group of driven innovators; Sophia Dhami, Isavella Tsoulias, and Arissai Filleul, who are all
+              committed to transforming the blood clotting treatment industry. By combining our knowledge of biomedical
+              engineering, regenerative medicine, neurology, and scientific research, we hope to investigate new
+              approaches to the problems associated with blood clotting disorders.
+            </p>
+            <p className="text-lg text-gray-700">
+              Our project's main goal is to develop cutting-edge therapeutic approaches that can enhance patient
+              outcomes and have a long-lasting effect on medical research. We are committed to advancing the treatment
+              and prevention of blood clotting problems with our varied backgrounds and inventive spirit.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <AnimatedSection animation="fade-up">
@@ -81,31 +105,34 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+      {/* Team Members Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red text-center mb-12">Our Team</h2>
+            <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red text-center mb-12">Meet Our Team</h2>
           </AnimatedSection>
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto">
+          <div className="grid gap-12 max-w-6xl mx-auto">
             {teamMembers.map((member, index) => (
               <AnimatedSection key={index} animation="fade-up" delay={index * 200}>
-                <Card className="overflow-hidden h-full">
-                  <div className="aspect-square relative w-full">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                  <div className="md:col-span-1">
+                    <div className="aspect-square relative w-full max-w-[300px] mx-auto overflow-hidden rounded-lg shadow-lg">
+                      <Image
+                        src={member.image || "/placeholder.svg"}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold">{member.name}</h3>
-                    <p className="text-sm text-clotguard-red mb-2">{member.role}</p>
-                    <p className="text-gray-600 text-sm">{member.bio}</p>
-                  </CardContent>
-                </Card>
+                  <div className="md:col-span-2">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-1">{member.name}</h3>
+                    <p className="text-md text-clotguard-red font-medium mb-4">{member.role}</p>
+                    <p className="text-gray-600">{member.bio}</p>
+                  </div>
+                </div>
+                {index < teamMembers.length - 1 && <hr className="my-10 border-gray-200" />}
               </AnimatedSection>
             ))}
           </div>
@@ -113,7 +140,7 @@ export default function About() {
       </section>
 
       {/* Journey Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <AnimatedSection animation="fade-up">
