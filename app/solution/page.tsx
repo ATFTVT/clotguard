@@ -184,13 +184,19 @@ export default function Solution() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <AnimatedSection animation="fade-up" delay={200} className="order-2 lg:order-1">
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Nanobots illustration"
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover mb-4"
-                  />
+                  <div className="relative">
+                    <Image
+                      src="/images/nanobot-microscope.png"
+                      alt="Microscopic view of a nanobot"
+                      width={500}
+                      height={300}
+                      className="rounded-lg object-contain w-full mb-4"
+                    />
+                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded text-xs text-gray-700 max-w-[250px]">
+                      Electron microscope image of a biocompatible nanobot designed to navigate blood vessels and
+                      deliver clotting agents. The structured design allows for precise movement and targeted delivery.
+                    </div>
+                  </div>
                 </div>
               </AnimatedSection>
               <AnimatedSection animation="fade-up" className="order-1 lg:order-2">
@@ -206,6 +212,12 @@ export default function Solution() {
                     is programmed to: Detect vascular damage, migrate toward the injury site, and activate as well as
                     assist with clot formation. They carry clotting agents such as thrombin, which will assist the
                     hemostasis process.
+                  </p>
+                  <p className="text-gray-600 mt-2">
+                    The microscopic robots shown in the image are engineered at the nanoscale with precision components
+                    that allow them to navigate through blood vessels and respond to biochemical signals at injury
+                    sites. Their structure includes sensors for detecting bleeding and compartments for carrying
+                    platelets and clotting factors.
                   </p>
                 </div>
               </AnimatedSection>
@@ -230,13 +242,19 @@ export default function Solution() {
               </AnimatedSection>
               <AnimatedSection animation="fade-up" delay={200}>
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Patch activation illustration"
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover mb-4"
-                  />
+                  <div className="relative">
+                    <Image
+                      src="/images/activated-platelets.png"
+                      alt="Activated platelets under electron microscope"
+                      width={500}
+                      height={500}
+                      className="rounded-lg object-contain w-full mb-4"
+                    />
+                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded text-xs text-gray-700 max-w-[250px]">
+                      Electron microscope image of activated platelets with extended pseudopods, ready to form clots at
+                      injury sites. These platelets are similar to those deployed by the ClotGuard patch.
+                    </div>
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
@@ -245,13 +263,20 @@ export default function Solution() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <AnimatedSection animation="fade-up" delay={200} className="order-2 lg:order-1">
                 <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Blood loss prevention illustration"
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover mb-4"
-                  />
+                  <div className="relative">
+                    <Image
+                      src="/images/hemostasis-diagram.png"
+                      alt="Hemostasis process diagram showing the four stages of blood clotting"
+                      width={600}
+                      height={500}
+                      className="rounded-lg object-contain w-full mb-4"
+                    />
+                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded text-xs text-gray-700 max-w-[250px]">
+                      The natural hemostasis process: 1) Vessel constriction, 2) Primary hemostasis with platelet clot
+                      formation, 3) Secondary hemostasis with coagulation factors, 4) Stable fibrin clot formation.
+                      ClotGuard accelerates and enhances this process.
+                    </div>
+                  </div>
                 </div>
               </AnimatedSection>
               <AnimatedSection animation="fade-up" className="order-1 lg:order-2">
@@ -263,19 +288,29 @@ export default function Solution() {
                     <h3 className="text-2xl font-bold text-gray-800">Preventing Blood Loss Method</h3>
                   </div>
                   <p className="text-gray-600">
-                    Nanobots and platelets start to work hard together: Platelets initiate the clotting cascade, and
-                    nanobots amplify clotting signals and seal microtears. Microneedles will provide the localized
-                    delivery to external wounds. For internal hemorrhage, bots circulate and target the source of
-                    bleeding.
+                    Nanobots and platelets work together to accelerate the natural hemostasis process shown in the
+                    diagram. When deployed, ClotGuard's platelets initiate the clotting cascade (primary hemostasis),
+                    while nanobots amplify clotting signals and deliver additional coagulation factors to strengthen the
+                    clot (secondary hemostasis).
+                  </p>
+                  <p className="text-gray-600 mt-2">
+                    For external wounds, microneedles provide localized delivery directly to the injury site. For
+                    internal hemorrhage, nanobots circulate through the bloodstream and target the source of bleeding
+                    using advanced biosensors that detect chemical signals released by damaged tissue.
+                  </p>
+                  <p className="text-gray-600 mt-2">
+                    The ClotGuard system can reduce clotting time by up to 60% compared to the body's natural response,
+                    creating stable clots that prevent further blood loss until medical professionals can provide
+                    definitive care.
                   </p>
                 </div>
               </AnimatedSection>
             </div>
 
             {/* Step 5 */}
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="max-w-3xl mx-auto">
               <AnimatedSection animation="fade-up">
-                <div className="space-y-4">
+                <div className="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-clotguard-100 text-clotguard-red font-bold">
                       5
@@ -283,20 +318,22 @@ export default function Solution() {
                     <h3 className="text-2xl font-bold text-gray-800">Deactivation of Nanobots After Blood Clotting</h3>
                   </div>
                   <p className="text-gray-600">
-                    After clotting is achieved, nanobots detect clotting factor levels and pressure normalization. They
-                    also become biodegradable, breaking down into harmless byproducts.
+                    After clotting is achieved, nanobots detect clotting factor levels and pressure normalization. The
+                    intelligent sensors within each nanobot monitor the surrounding environment for signs that
+                    hemostasis has been successful, including stabilized blood pressure and normalized clotting factor
+                    concentrations.
                   </p>
-                </div>
-              </AnimatedSection>
-              <AnimatedSection animation="fade-up" delay={200}>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Nanobot deactivation illustration"
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover mb-4"
-                  />
+                  <p className="text-gray-600">
+                    Once their mission is complete, the nanobots enter a programmed biodegradation phase, breaking down
+                    into harmless byproducts that are safely processed and eliminated by the body. This self-terminating
+                    feature ensures that the nanobots don't interfere with normal bodily functions after they've served
+                    their purpose.
+                  </p>
+                  <p className="text-gray-600">
+                    The biodegradation process typically completes within 24-48 hours, leaving no trace of the
+                    intervention except for the stabilized clot that continues to protect the wound until natural
+                    healing can occur.
+                  </p>
                 </div>
               </AnimatedSection>
             </div>

@@ -247,9 +247,7 @@ export default function Home() {
                 <Button className="bg-white text-clotguard-red hover:bg-gray-100">Explore Our Solution</Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" className="border-white text-white hover:bg-clotguard-dark">
-                  Contact Us
-                </Button>
+                <Button className="bg-white text-clotguard-red hover:bg-gray-100 border-white">Contact Us</Button>
               </Link>
             </div>
           </AnimatedSection>
