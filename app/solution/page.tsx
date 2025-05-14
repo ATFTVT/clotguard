@@ -436,6 +436,63 @@ export default function Solution() {
         </div>
       </section>
 
+      {/* Learn More Section with Medium Article Link */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <AnimatedSection animation="fade-up">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter text-clotguard-red">Dive Deeper</h2>
+                <p className="text-xl text-gray-800 font-medium">
+                  Tiny Bots, Big Impact: Revolutionizing Healing with Platelet Nanobots
+                </p>
+                <p className="text-gray-600">
+                  In our detailed Medium article, we delve heavily into how engineered platelet nanobots could
+                  accelerate healing, minimize medical complications, and redefine the future of medicine itself.
+                  Platelet nanobots aren't just science fiction; in fact, they're turning into a real solution for
+                  traumatic healing and care.
+                </p>
+                <p className="text-gray-600">
+                  Learn more about how these tiny engineered machines navigate the bloodstream alongside red blood
+                  cells, targeting disease at the cellular level for precision treatment.
+                </p>
+                <div className="pt-4">
+                  <a
+                    href="https://medium.com/@sophiadhami123/tiny-bots-big-impact-revolutionizing-healing-with-platelet-nanobots-4dac2e9fc6aa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-clotguard-red hover:bg-clotguard-dark">
+                      Read the Full Article
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="slide-left" delay={200}>
+              <div className="mx-auto lg:ml-auto">
+                <div className="relative rounded-lg overflow-hidden shadow-xl border-2 border-clotguard-100">
+                  <Image
+                    src="/images/nanobots-bloodstream.png"
+                    alt="Nanobots navigate the bloodstream alongside red blood cells"
+                    width={600}
+                    height={400}
+                    className="rounded-lg object-contain w-full"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-clotguard-red/90 to-transparent p-4">
+                    <p className="text-white text-sm font-medium">
+                      Nanobots navigate the bloodstream alongside red blood cells, targeting disease at the cellular
+                      level for precision treatment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-clotguard-red text-white">
         <div className="container px-4 md:px-6 text-center">
